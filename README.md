@@ -1,7 +1,3 @@
-[TOCM]
-
-[TOC]
-
 # Jenkins tutorial in Docker with Agents
 
 ## Installing Jenkins
@@ -37,8 +33,8 @@ networks:
     name: "jenkins-network"
 ```
 
-> **Note**  
-The default `user` set by _Dokerfile_ is `jenkins`. This can be verified by going to _tags_ under the official docker image for Jenkins. 
+> [!NOTE]  
+> The default `user` set by _Dokerfile_ is `jenkins`. This can be verified by going to _tags_ under the official docker image for Jenkins. 
 
 The volume top level element with name set to `Jenkins_home`, declares a named volume which can be reused. This way Jenkins data will be persistent even if the container is shut down. 
 
@@ -119,6 +115,7 @@ Now we have successfully added the agent. We can try out some jobs using the age
 
 For example below is a sample Jenkinsfile
 
+**Jenkinsfile**
 ```groovy
 pipeline {
     agent {
